@@ -12,13 +12,55 @@
   <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
   <style>
     body { margin: 0; padding: 0; }
-    main { max-width: 700px; margin: 0 auto; padding: 48px 24px 64px 24px; }
-    main h1 { font-size: 2rem; color: #004466; margin-bottom: 16px; line-height: 1.2; }
-    main h2 { font-size: 1.2rem; color: #004466; margin-top: 36px; margin-bottom: 12px; }
-    main p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; color: #222; }
-    main ul { padding-left: 20px; margin-bottom: 20px; }
-    main li { font-size: 1.05rem; line-height: 1.7; margin-bottom: 6px; }
-    main a { color: #004466; }
+    .docs-page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 64px 24px;
+    }
+    .docs-page h1 {
+      font-size: 2rem;
+      color: #004466;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .docs-page .lead {
+      font-size: 1.1rem;
+      color: #6b7a89;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .docs-page h2 {
+      font-size: 1.15rem;
+      color: #004466;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e0eaf0;
+    }
+    .docs-page p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: #222;
+    }
+    .docs-page ul {
+      padding-left: 22px;
+      margin-bottom: 20px;
+    }
+    .docs-page li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    .docs-page a { color: #004466; }
+    .footer-note {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #e0eaf0;
+      font-size: 0.98rem;
+      color: #6b7a89;
+    }
   </style>
 </head>
 <body>
@@ -67,13 +109,56 @@
 </style>
 
 
-  <main>
+  <main class="docs-page">
     <h1>SaltShore Documentation</h1>
-    <p>Technical notes, architecture, and workflow specifications.</p>
-    <h2>Technical Documents</h2>
+    <p class="lead">
+      Welcome to the SaltShore Systems documentation hub. Here you'll find guides,
+      references, and best practices for using SaltShore tools and workflows.
+    </p>
+
+    <h2>1. Getting Started</h2>
     <ul>
-        <li><a href="filetree.html">Project File Tree</a></li>
+      <li>What SaltShore tools are</li>
+      <li>How to access dashboard utilities</li>
+      <li>Basic navigation</li>
+      <li>Understanding the SaltShore workflow philosophy</li>
     </ul>
+
+    <h2>2. Vibe Coding Dashboard Utilities</h2>
+    <ul>
+      <li>Overview of modules</li>
+      <li>How to customize your dashboard</li>
+      <li>Saving and exporting data</li>
+      <li>Integrations (planned)</li>
+    </ul>
+
+    <h2>3. Workflow Engines</h2>
+    <ul>
+      <li>How workflows are structured</li>
+      <li>Intake &rarr; Active Work &rarr; Deliverables</li>
+      <li>Best practices for modular pipelines</li>
+      <li>Scaling your workflow</li>
+    </ul>
+
+    <h2>4. Templates</h2>
+    <ul>
+      <li>Intake templates</li>
+      <li>Deliverable templates</li>
+      <li>Communication templates</li>
+      <li>How to adapt templates to your business</li>
+    </ul>
+
+    <h2>5. Troubleshooting</h2>
+    <ul>
+      <li>Common issues</li>
+      <li>Resetting your dashboard</li>
+      <li>Contacting support</li>
+    </ul>
+
+    <p class="footer-note">
+      SaltShore Systems is actively expanding its documentation. Check back for
+      updates as new tools and modules are released.
+    </p>
   </main>
 <footer style="text-align:center; margin-top:40px; opacity:0.6; font-family:Revans, sans-serif;">
     &copy; 2026 SaltShore Systems &mdash; Where tides meet tech.

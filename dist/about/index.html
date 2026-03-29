@@ -12,9 +12,42 @@
   <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
   <style>
     body { margin: 0; padding: 0; }
-    main { max-width: 700px; margin: 0 auto; padding: 48px 24px 64px 24px; }
-    main h1 { font-size: 2rem; color: #004466; margin-bottom: 16px; line-height: 1.2; }
-    main p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; color: #222; }
+    .centered-page {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px 64px 24px;
+      text-align: center;
+    }
+    .centered-page h1 {
+      font-size: 2rem;
+      color: #004466;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .centered-page .lead {
+      font-size: 1.15rem;
+      color: #6b7a89;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .content-block {
+      text-align: left;
+      margin-bottom: 36px;
+    }
+    .content-block h2 {
+      font-size: 1.2rem;
+      color: #004466;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+    .content-block p, .content-block ul {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #222;
+      margin: 0 0 12px 0;
+    }
+    .content-block ul { padding-left: 20px; }
+    .content-block li { margin-bottom: 6px; }
   </style>
 </head>
 <body>
@@ -63,9 +96,52 @@
 </style>
 
 
-  <main>
-    <h1>About SaltShore Systems</h1>
-    <p>SaltShore Systems is a Maine-based software brand blending maritime grit with modern engineering. We build precise, reliable, and intuitive software grounded in coastal values.</p>
+  <main class="centered-page">
+    <section>
+      <h1>Where tides meet tech.</h1>
+      <p class="lead">
+        SaltShore Systems builds tools that help people work smarter, move faster,
+        and stay organized without friction.
+      </p>
+    </section>
+
+    <section class="content-block">
+      <h2>Who We Are</h2>
+      <p>
+        SaltShore is a small, focused software brand dedicated to workflow design,
+        automation, and clean digital experiences. We believe that great tools
+        shouldn't get in your way — they should disappear into the background and
+        let you do your best work.
+      </p>
+    </section>
+
+    <section class="content-block">
+      <h2>What We Do</h2>
+      <ul>
+        <li>Modular workflow engines</li>
+        <li>Dashboard utilities for small businesses</li>
+        <li>Gig-work operational pipelines</li>
+        <li>Templates that reduce friction and increase clarity</li>
+        <li>Lightweight tools that scale with your needs</li>
+      </ul>
+    </section>
+
+    <section class="content-block">
+      <h2>Our Philosophy</h2>
+      <p>
+        Software should feel like a well-built dock: steady, simple, and ready for
+        whatever you bring to it.
+      </p>
+    </section>
+
+    <section class="content-block">
+      <h2>A Note From the Founder</h2>
+      <p>
+        SaltShore Systems is built on the idea that technology should feel natural —
+        not noisy. Every tool we make is designed to help you move through your work
+        with confidence and calm.
+      </p>
+    </section>
   </main>
 <footer style="text-align:center; margin-top:40px; opacity:0.6; font-family:Revans, sans-serif;">
     &copy; 2026 SaltShore Systems &mdash; Where tides meet tech.

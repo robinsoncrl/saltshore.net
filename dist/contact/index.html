@@ -12,10 +12,42 @@
   <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
   <style>
     body { margin: 0; padding: 0; }
-    main { max-width: 700px; margin: 0 auto; padding: 48px 24px 64px 24px; }
-    main h1 { font-size: 2rem; color: #004466; margin-bottom: 16px; line-height: 1.2; }
-    main p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; color: #222; }
-    main a { color: #004466; }
+    .centered-page {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px 64px 24px;
+      text-align: center;
+    }
+    .centered-page h1 {
+      font-size: 2rem;
+      color: #004466;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .centered-page .lead {
+      font-size: 1.15rem;
+      color: #6b7a89;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .content-block {
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .content-block h2 {
+      font-size: 1.1rem;
+      color: #004466;
+      margin-bottom: 6px;
+      margin-top: 28px;
+    }
+    .content-block h2:first-child { margin-top: 0; }
+    .content-block p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #222;
+      margin: 0 0 8px 0;
+    }
+    .content-block a { color: #004466; }
   </style>
 </head>
 <body>
@@ -64,9 +96,25 @@
 </style>
 
 
-  <main>
-    <h1>Contact SaltShore Systems</h1>
-    <p>Email: <a href="mailto:support@saltshore.net">support@saltshore.net</a></p>
+  <main class="centered-page">
+    <section>
+      <h1>Let's connect.</h1>
+      <p class="lead">
+        Whether you're exploring SaltShore tools or looking for workflow guidance,
+        we're here to help.
+      </p>
+    </section>
+
+    <section class="content-block">
+      <h2>Email</h2>
+      <p><a href="mailto:support@saltshore.net">support@saltshore.net</a></p>
+
+      <h2>General Inquiries</h2>
+      <p><a href="mailto:info@saltshore.net">info@saltshore.net</a></p>
+
+      <h2>Support Hours</h2>
+      <p>Monday&ndash;Friday<br>9am&ndash;5pm EST</p>
+    </section>
   </main>
 <footer style="text-align:center; margin-top:40px; opacity:0.6; font-family:Revans, sans-serif;">
     &copy; 2026 SaltShore Systems &mdash; Where tides meet tech.

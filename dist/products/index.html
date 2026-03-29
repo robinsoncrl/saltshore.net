@@ -12,11 +12,53 @@
   <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
   <style>
     body { margin: 0; padding: 0; }
-    main { max-width: 700px; margin: 0 auto; padding: 48px 24px 64px 24px; }
-    main h1 { font-size: 2rem; color: #004466; margin-bottom: 24px; line-height: 1.2; }
-    main h2 { font-size: 1.25rem; color: #004466; margin-top: 36px; margin-bottom: 10px; line-height: 1.3; }
-    main p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; color: #222; }
-    main section { margin-bottom: 32px; }
+    .centered-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 64px 24px;
+      text-align: center;
+    }
+    .centered-page h1 {
+      font-size: 2rem;
+      color: #004466;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .centered-page .lead {
+      font-size: 1.15rem;
+      color: #6b7a89;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .product-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    @media (min-width: 600px) {
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 28px 22px;
+      text-align: left;
+    }
+    .product-card h3 {
+      font-size: 1.1rem;
+      color: #004466;
+      margin: 0 0 10px 0;
+    }
+    .product-card p {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: #444;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -65,15 +107,55 @@
 </style>
 
 
-  <main>
-    <h1>SaltShore Products</h1>
+  <main class="centered-page">
     <section>
-      <h2>CalGen</h2>
-      <p>A modular calendar-generation engine for structured workflows.</p>
+      <h1>Tools built for clarity.</h1>
+      <p class="lead">
+        SaltShore products are designed to reduce friction, simplify operations,
+        and help individuals and small teams stay organized without overhead.
+      </p>
     </section>
-    <section>
-      <h2>Vibe Coding</h2>
-      <p>Dashboard utilities and workflow automation for small businesses.</p>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <h3>Vibe Coding Dashboard Utilities</h3>
+        <p>
+          A suite of lightweight, web-based dashboards that help business owners
+          track tasks, manage workflows, and stay aligned.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>Workflow Engines</h3>
+        <p>
+          Modular systems that turn messy processes into clean, repeatable pipelines.
+          Designed for gig workers, small teams, and solo operators.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>Operational Templates</h3>
+        <p>
+          Ready-to-use templates for intake, deliverables, communication, and
+          documentation. Built to scale with your work.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>Automation Tools</h3>
+        <p>
+          Small, focused utilities that remove repetitive tasks and keep your
+          operations running smoothly.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>SaltShore Roadmap</h3>
+        <p>
+          We're actively developing new dashboard modules, automation helpers,
+          and documentation tools. SaltShore grows with you.
+        </p>
+      </div>
     </section>
   </main>
 <footer style="text-align:center; margin-top:40px; opacity:0.6; font-family:Revans, sans-serif;">

@@ -31,7 +31,7 @@
       min-height: 100vh;
     }
     .hero {
-  padding: 140px 16px 0 16px;
+  padding: 60px 16px 0 16px;
   text-align: center;
   background: var(--bg) url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1440&q=80') center 70%/cover no-repeat;
   position: relative;
@@ -267,6 +267,28 @@
       .footer-mission {
         font-size: 0.98rem !important;
       }
+    }
+    /* Homepage-only circular highlight behind logo */
+    .site-header {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+    .site-header .logo-container {
+      background: rgba(255, 255, 255, 0.55);
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      padding: 0;
+    }
+    /* Ensure the logo fits inside the circle */
+    .site-header .logo-container img.logo {
+      width: 160px;
+      height: 160px;
     }
   </style>
 </head>
