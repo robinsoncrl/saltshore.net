@@ -623,3 +623,118 @@ img { max-width: 100%; height: auto; }
     display: block !important;
   }
 }
+/* =========================================================
+   SaltShore Product Page Micro-System (Base Definitions)
+   ========================================================= */
+
+/* Page container */
+.ss-page {
+  width: 100%;
+  max-width: var(--content-max-wide, 960px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--space-lg, 48px) var(--space-md, 24px) var(--space-xl, 64px);
+}
+
+/* Typography */
+.ss-h1 {
+  font-size: var(--h1, 2rem);
+  line-height: var(--leading-tight, 1.25);
+  margin-bottom: var(--space-md, 24px);
+}
+
+.ss-h2 {
+  font-size: var(--h2, 1.2rem);
+  margin-bottom: var(--space-sm, 12px);
+}
+
+.ss-h3 {
+  font-size: var(--h3, 1.05rem);
+  margin-bottom: var(--space-sm, 12px);
+}
+
+.ss-lead {
+  font-size: 1.05rem;
+  line-height: var(--leading-base, 1.7);
+  color: var(--muted, #6b7a89);
+  margin-bottom: var(--space-md, 24px);
+}
+
+.ss-body {
+  font-size: 1rem;
+  line-height: var(--leading-base, 1.7);
+  margin-bottom: var(--space-sm, 12px);
+}
+
+/* Links */
+.ss-link {
+  color: var(--accent, #004466);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 68, 102, 0.25);
+}
+
+.ss-link:hover {
+  border-bottom-color: rgba(0, 68, 102, 0.6);
+}
+
+/* Cards */
+.ss-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  padding: var(--space-md, 24px);
+  margin-bottom: var(--space-md, 24px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+.ss-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: var(--accent, #004466);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ss-btn:hover {
+  background: #003355;
+}
+
+/* Pills / tags */
+.ss-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: rgba(0,68,102,0.1);
+  color: var(--accent, #004466);
+}
+
+/* Grids */
+.ss-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md, 24px);
+}
+
+/* Kicker / breadcrumb */
+.ss-kicker {
+  font-size: 0.75rem;
+  color: var(--muted, #6b7a89);
+  margin-bottom: var(--space-sm, 12px);
+}
+
+/* Dark mode base */
+@media (prefers-color-scheme: dark) {
+  .ss-card {
+    background: rgba(255,255,255,0.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  }
+
+  .ss-body,
+  .ss-lead {
+    color: var(--muted, #9aa7b2);
+  }
+}
