@@ -67,11 +67,18 @@
   <div id="header-placeholder"></div>
   <script>
     fetch('/partials/header.html')
-      .then(r => r.text())
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
       .then(html => {
         document.getElementById('header-placeholder').innerHTML = html;
         var a = document.querySelector('.main-nav a[href="/products"]');
         if (a) a.classList.add('active');
+      })
+      .catch(() => {
+        document.getElementById('header-placeholder').innerHTML =
+          '<header class="site-header"><nav class="main-nav">' +
+          '<a href="/index.html">Home</a><a href="/about">About</a>' +
+          '<a href="/products">Products</a><a href="/contact">Contact</a>' +
+          '<a href="/docs">Docs</a></nav></header>';
       });
   </script>
 
@@ -131,8 +138,13 @@
   <div id="footer-placeholder"></div>
   <script>
     fetch('/partials/footer.html')
-      .then(r => r.text())
-      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(html => { document.getElementById('footer-placeholder').innerHTML = html; })
+      .catch(() => {
+        document.getElementById('footer-placeholder').innerHTML =
+          '<footer class="site-footer" style="text-align:center;padding:24px 8px;opacity:0.75;">' +
+          '<p>\u00a9 2026 SaltShore Systems \u2014 Where tides meet tech.</p></footer>';
+      });
   </script>
 
 </body>

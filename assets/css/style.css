@@ -120,6 +120,59 @@ p, li, span, label, input, button {
   font-weight: 500;
 }
 
+/* === Focus styles === */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* === Mobile navigation toggle === */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.75);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #002233;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    margin-bottom: 8px;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-width: 320px;
+    padding: 8px 0;
+    margin-top: 0;
+  }
+
+  .main-nav.nav-open {
+    display: flex;
+  }
+
+  .main-nav.nav-open a {
+    padding: 10px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 1.1rem;
+  }
+
+  .main-nav.nav-open a:last-child {
+    border-bottom: none;
+  }
+}
+
 /* === Products grid polish === */
 .product-grid {
   display: grid;
