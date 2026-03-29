@@ -8,8 +8,8 @@
 
   /* Type scale */
   --h1: 2rem;
-  --h2: 1.2rem;
-  --h3: 1.05rem;
+  --h2: 1.4rem;
+  --h3: 1.15rem;
   --h4: 1rem;
   --leading-tight: 1.25;
   --leading-base: 1.7;
@@ -127,12 +127,12 @@ body {
   text-align: center;
   margin-top: 40px;
   padding: 24px 8px 16px 8px;
-  opacity: 0.75;
   font-size: 0.97rem;
 }
 
 .site-footer p {
   margin: 0 0 12px 0;
+  color: var(--muted);
 }
 
 .footer-icons {
@@ -724,11 +724,11 @@ img { max-width: 100%; height: auto; }
 
 /* Cards */
 .ss-card {
-  background: rgba(255,255,255,0.85);
+  background: #ffffff;
   border-radius: 16px;
   padding: var(--space-md, 24px);
   margin-bottom: var(--space-md, 24px);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 /* Buttons */
@@ -766,7 +766,7 @@ img { max-width: 100%; height: auto; }
 
 /* Kicker / breadcrumb */
 .ss-kicker {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--muted, #6b7a89);
   margin-bottom: var(--space-sm, 12px);
 }
