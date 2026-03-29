@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products – SaltShore Systems</title>
-  <meta name="description" content="SaltShore Systems products — modular, reliable software tools.">
+  <meta name="description" content="CalGen, FinPro, and LedgerPro — offline-first tools for freelancers and sole operators.">
   <meta name="theme-color" content="#004466">
+  <meta property="og:title" content="SaltShore Systems Products — CalGen, FinPro, LedgerPro">
+  <meta property="og:description" content="Three integrated tools for freelancers. Offline-first, one-time purchase, local data.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saltshore.net/products">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
@@ -13,7 +17,7 @@
   <style>
     body { margin: 0; padding: 0; }
     .centered-page {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 48px 24px 64px 24px;
       text-align: center;
@@ -30,34 +34,107 @@
       margin-bottom: 40px;
       line-height: 1.7;
     }
-    .product-grid {
+    .suite-pipeline {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 0 auto 48px auto;
+      padding: 16px 24px;
+      background: #f0f7fb;
+      border-radius: 10px;
+      max-width: 640px;
+      font-size: 0.95rem;
+      color: #4a5a6a;
+      letter-spacing: 0.2px;
     }
-    @media (min-width: 600px) {
+    .suite-pipeline .step {
+      font-weight: 600;
+      color: #004466;
+    }
+    .suite-pipeline .arrow {
+      color: #8ab4c8;
+    }
+    .suite-pipeline .sub {
+      width: 100%;
+      text-align: center;
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: #8a9aaa;
+      letter-spacing: 0.3px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      text-align: left;
+    }
+    @media (min-width: 700px) {
       .product-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
     }
     .product-card {
       background: #fff;
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      padding: 28px 22px;
-      text-align: left;
+      padding: 28px 24px 32px 24px;
     }
     .product-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #004466;
-      margin: 0 0 10px 0;
+      margin: 0 0 4px 0;
+    }
+    .product-card .tagline {
+      font-size: 0.9rem;
+      color: #6b7a89;
+      margin: 0 0 16px 0;
+      font-style: italic;
     }
     .product-card p {
       font-size: 1rem;
       line-height: 1.65;
-      color: #444;
+      color: #333;
+      margin: 0 0 16px 0;
+    }
+    .product-card ul {
       margin: 0;
+      padding-left: 18px;
+    }
+    .product-card ul li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4a5a6a;
+      margin-bottom: 4px;
+    }
+    .shared-principles {
+      margin-top: 56px;
+      padding: 32px 24px;
+      background: #f7fbfd;
+      border-radius: 14px;
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .shared-principles h2 {
+      font-size: 1.1rem;
+      color: #004466;
+      margin: 0 0 16px 0;
+    }
+    .shared-principles ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .shared-principles li {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 6px;
+    }
+    .shared-principles li strong {
+      color: #004466;
     }
   </style>
 </head>
@@ -86,52 +163,90 @@
     <section>
       <h1>Tools built for clarity.</h1>
       <p class="lead">
-        SaltShore products are designed to reduce friction, simplify operations,
-        and help individuals and small teams stay organized without overhead.
+        Three integrated tools for freelancers, contractors, and sole operators.<br>
+        Offline-first. One-time purchase. Your data stays local.
       </p>
     </section>
 
+    <div class="suite-pipeline">
+      <span class="step">CalGen</span>
+      <span class="arrow">&rarr;</span>
+      <span class="step">FinPro</span>
+      <span class="arrow">&rarr;</span>
+      <span class="step">LedgerPro</span>
+      <span class="sub">Structured time &nbsp;&middot;&nbsp; Defensible invoice &nbsp;&middot;&nbsp; Reconciled record</span>
+    </div>
+
     <section id="products-grid" class="product-grid">
-      <div class="product-card" data-product-id="vibe-dashboard">
-        <h3>Vibe Coding Dashboard Utilities</h3>
+
+      <div class="product-card" data-product-id="calgen">
+        <h3>CalGen</h3>
+        <p class="tagline">iCalendar generation that actually works.</p>
         <p>
-          A suite of lightweight, web-based dashboards that help business owners
-          track tasks, manage workflows, and stay aligned.
+          The iCalendar standard (RFC 5545) is 147 pages long and broken by every major
+          calendar tool in a different way. CalGen generates compliant ICS files by construction —
+          no timezone drift, no silent field drops, no property ordering failures.
         </p>
+        <ul>
+          <li>Canonical VTIMEZONE blocks and IANA timezone identifiers</li>
+          <li>Correct RRULE, EXDATE, and RECURRENCE-ID handling</li>
+          <li>Stable UIDs — same event never becomes a duplicate on re-export</li>
+          <li>Deterministic output — identical inputs produce identical bytes</li>
+          <li>Local audit log of every generation event</li>
+        </ul>
       </div>
 
-      <div class="product-card" data-product-id="workflow-engines">
-        <h3>Workflow Engines</h3>
+      <div class="product-card" data-product-id="finpro">
+        <h3>FinPro</h3>
+        <p class="tagline">From structured time to a defensible invoice.</p>
         <p>
-          Modular systems that turn messy processes into clean, repeatable pipelines.
-          Designed for gig workers, small teams, and solo operators.
+          Freelancers lose 10–20% of billable income annually to tracking gaps — not low rates,
+          not slow clients, but invisible gaps between hours worked and hours billed. FinPro
+          closes that gap by ingesting CalGen time entries directly and calculating every
+          invoice from explicit rules.
         </p>
+        <ul>
+          <li>CalGen time entries flow in via <code>.finpro.json</code> — no manual transcription</li>
+          <li>Versioned rate definitions with <code>effective_from</code> and <code>effective_to</code> dates</li>
+          <li>Overtime, weekend, and holiday multipliers applied automatically</li>
+          <li>Immutable line items — every amount locked at invoice issuance</li>
+          <li>Transparent gross-to-net deduction breakdown</li>
+          <li>Household Mode for chore tracking and allowance calculation</li>
+        </ul>
       </div>
 
-      <div class="product-card" data-product-id="operational-templates">
-        <h3>Operational Templates</h3>
+      <div class="product-card" data-product-id="ledgerpro">
+        <h3>LedgerPro</h3>
+        <p class="tagline">Clean financial records — without the cloud.</p>
         <p>
-          Ready-to-use templates for intake, deliverables, communication, and
-          documentation. Built to scale with your work.
+          When Mint shut down in early 2024, 3.6M users lost years of financial history. LedgerPro
+          takes the opposite approach: file-based import, local SQLite storage, and a deterministic
+          engine that never silently resolves ambiguity.
         </p>
+        <ul>
+          <li>Configurable bank profiles — normalize any CSV or OFX format</li>
+          <li>Composite duplicate detection (amount + date + description fingerprint)</li>
+          <li>Transfers as first-class entities — excluded from income and expense totals</li>
+          <li>Canonical merchant alias groups with visible rule derivation</li>
+          <li>Statement coverage index — gaps surfaced before tax time</li>
+          <li>SHA-256 document integrity hashing on every imported file</li>
+          <li>FinPro invoice reconciliation — matches deposits to issued invoices</li>
+        </ul>
       </div>
 
-      <div class="product-card" data-product-id="automation-tools">
-        <h3>Automation Tools</h3>
-        <p>
-          Small, focused utilities that remove repetitive tasks and keep your
-          operations running smoothly.
-        </p>
-      </div>
-
-      <div class="product-card coming-soon" data-product-id="saltshore-roadmap">
-        <h3>SaltShore Roadmap</h3>
-        <p>
-          We're actively developing new dashboard modules, automation helpers,
-          and documentation tools. SaltShore grows with you.
-        </p>
-      </div>
     </section>
+
+    <div class="shared-principles">
+      <h2>Shared across all three</h2>
+      <ul>
+        <li><strong>Offline-first.</strong> No cloud dependency. No credential delegation. No account required.</li>
+        <li><strong>One-time purchase.</strong> No subscription. No monthly fee. Your data is never held hostage.</li>
+        <li><strong>Deterministic.</strong> Same input always produces the same output. Every figure is traceable to its source.</li>
+        <li><strong>No silent failures.</strong> Every discrepancy is surfaced explicitly. Approximation is a bug, not a feature.</li>
+        <li><strong>Local data ownership.</strong> Your records live on your machine in portable, open formats.</li>
+      </ul>
+    </div>
+
   </main>
 
   <!-- Shared footer include -->
