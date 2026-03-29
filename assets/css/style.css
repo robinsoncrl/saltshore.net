@@ -822,3 +822,23 @@ img { max-width: 100%; height: auto; }
     color: #9fc6dd !important;
   }
 }
+
+/* =========================================================
+   Legal Documents — Semantic Heading Color Binding
+   ========================================================= */
+
+/* Light mode: legal titles & clause headers */
+.ss-page h1,
+.ss-page h2,
+.ss-page h3 {
+  color: #002233 !important; /* navy-800 */
+}
+
+/* Dark mode: legal titles & clause headers */
+@media (prefers-color-scheme: dark) {
+  .ss-page h1,
+  .ss-page h2,
+  .ss-page h3 {
+    color: #eaf2f8 !important;
+  }
+}
