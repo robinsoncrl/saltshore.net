@@ -237,3 +237,92 @@ p, li, span, label, input, button {
 .docs-content li {
   margin-bottom: 6px;
 }
+/* =========================================================
+   Dark Mode + Mobile + Footer Logo (Unified)
+   ========================================================= */
+
+/* ---- Dark Mode: Page Canvas Fix ---- */
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body {
+    background-color: var(--bg) !important;
+    color: var(--text);
+  }
+
+  .ss-page,
+  .docs-page,
+  .legal-page {
+    background: transparent;
+  }
+}
+
+/* ---- Dark Mode: Footer Logo Contrast ---- */
+@media (prefers-color-scheme: dark) {
+
+  .site-footer img,
+  .site-footer a img,
+  .site-footer .logo {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.35),
+      0 8px 24px rgba(0, 0, 0, 0.55);
+  }
+
+  @media (max-width: 640px) {
+    .site-footer img,
+    .site-footer a img,
+    .site-footer .logo {
+      padding: 6px 10px;
+      border-radius: 10px;
+    }
+  }
+}
+
+/* ---- Mobile Optimization ---- */
+@media (max-width: 640px) {
+
+  .ss-page {
+    padding: 28px 16px 40px;
+  }
+
+  .ss-hero {
+    padding-bottom: 18px;
+  }
+
+  .ss-h1 {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .ss-h2 {
+    font-size: 1.25rem;
+  }
+
+  .ss-lead {
+    font-size: 1rem;
+  }
+
+  .ss-card {
+    padding: 16px;
+  }
+
+  .ss-actions {
+    gap: 10px;
+  }
+
+  .ss-btn {
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  .ss-pill {
+    font-size: 0.78rem;
+  }
+
+  .ss-grid {
+    gap: 14px;
+  }
+}

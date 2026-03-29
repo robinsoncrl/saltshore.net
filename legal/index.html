@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal — SaltShore Systems</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="ss-page">
+    <p class="ss-kicker"><a class="ss-link" href="/">Home</a> / Legal</p>
+
+    <h1 class="ss-h1">Legal</h1>
+    <p class="ss-lead">This page lists the authoritative legal agreements governing use of SaltShore Systems software.</p>
+
+    <ul>
+      <li class="ss-body"><a class="ss-link" href="/legal/eula-suite.html">End User License Agreement (Suite)</a></li>
+      <li class="ss-body"><a class="ss-link" href="/legal/eula-calgen.html">CalGen End User License Agreement</a></li>
+      <li class="ss-body"><a class="ss-link" href="/legal/eula-finpro.html">FinPro End User License Agreement</a></li>
+      <li class="ss-body"><a class="ss-link" href="/legal/eula-ledgerpro.html">LedgerPro End User License Agreement</a></li>
+    </ul>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('/partials/header.html').then(r => r.text()).then(h => document.getElementById('header').innerHTML = h);
+    fetch('/partials/footer.html').then(r => r.text()).then(h => document.getElementById('footer').innerHTML = h);
+  </script>
+</body>
+</html>

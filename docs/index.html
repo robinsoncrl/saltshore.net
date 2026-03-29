@@ -6,10 +6,6 @@
   <title>Documentation – SaltShore Systems</title>
   <meta name="description" content="SaltShore Systems documentation — technical notes, architecture, and workflow specifications.">
   <meta name="theme-color" content="#004466">
-  <meta property="og:title" content="SaltShore Systems Documentation">
-  <meta property="og:description" content="Guides and references for CalGen, FinPro, and LedgerPro.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://saltshore.net/docs">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
@@ -109,18 +105,11 @@
   <div id="header-placeholder"></div>
   <script>
     fetch('/partials/header.html')
-      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(r => r.text())
       .then(html => {
         document.getElementById('header-placeholder').innerHTML = html;
         var a = document.querySelector('.main-nav a[href="/docs"]');
         if (a) a.classList.add('active');
-      })
-      .catch(() => {
-        document.getElementById('header-placeholder').innerHTML =
-          '<header class="site-header"><nav class="main-nav">' +
-          '<a href="/index.html">Home</a><a href="/about">About</a>' +
-          '<a href="/products">Products</a><a href="/contact">Contact</a>' +
-          '<a href="/docs">Docs</a></nav></header>';
       });
   </script>
 
@@ -135,6 +124,15 @@
           <li><a href="#troubleshooting">Troubleshooting</a></li>
         </ul>
       </nav>
+      <section class="docs-section">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/legal/eula-suite.html">End User License Agreement (Suite)</a></li>
+          <li><a href="/legal/eula-calgen.html">CalGen End User License Agreement</a></li>
+          <li><a href="/legal/eula-finpro.html">FinPro End User License Agreement</a></li>
+          <li><a href="/legal/eula-ledgerpro.html">LedgerPro End User License Agreement</a></li>
+        </ul>
+      </section>
     </aside>
 
     <section class="docs-content">
@@ -195,13 +193,8 @@
   <div id="footer-placeholder"></div>
   <script>
     fetch('/partials/footer.html')
-      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
-      .then(html => { document.getElementById('footer-placeholder').innerHTML = html; })
-      .catch(() => {
-        document.getElementById('footer-placeholder').innerHTML =
-          '<footer class="site-footer" style="text-align:center;padding:24px 8px;opacity:0.75;">' +
-          '<p>\u00a9 2026 SaltShore Systems \u2014 Where tides meet tech.</p></footer>';
-      });
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
   </script>
   <script>
     // Scroll-spy: highlight active section in sidebar
