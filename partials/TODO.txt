@@ -1,0 +1,3 @@
+TODO:
+- Update all subpages to remove inline nav and replace with header/footer include system.
+- Mark active page link by adding class="active" to the correct <a> tag per page.
