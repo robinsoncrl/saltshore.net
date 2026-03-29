@@ -19,13 +19,49 @@
   </style>
 </head>
 <body>
-<nav class="main-nav">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/products/">Products</a>
-    <a href="/contact/">Contact</a>
-    <a href="/docs/">Docs</a>
-</nav>
+<header class="site-header">
+  <div class="logo-container">
+    <a href="/index.html">
+      <img src="/assets/SSS_logo_2.png" alt="SaltShore Systems Logo" class="logo">
+    </a>
+  </div>
+
+  <nav class="main-nav">
+    <a href="/index.html">Home</a>
+    <a href="/about">About</a>
+    <a href="/products">Products</a>
+    <a href="/contact">Contact</a>
+    <a href="/docs">Docs</a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .logo-container {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .main-nav {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+</style>
 
 
   <main>

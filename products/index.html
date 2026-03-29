@@ -28,7 +28,7 @@
       .then(r => r.text())
       .then(html => {
         document.getElementById('header-placeholder').innerHTML = html;
-        var a = document.querySelector('.main-nav a[href="/products/"]');
+        var a = document.querySelector('.main-nav a[href="/products"]');
         if (a) a.classList.add('active');
       });
   </script>

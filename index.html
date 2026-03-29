@@ -322,7 +322,7 @@
           .then(r => r.text())
           .then(html => {
             document.getElementById('header-placeholder').innerHTML = html;
-            var a = document.querySelector('.main-nav a[href="/"]');
+            var a = document.querySelector('.main-nav a[href="/index.html"]');
             if (a) a.classList.add('active');
           });
       </script>
