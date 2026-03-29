@@ -6,12 +6,21 @@ HEADER = (ROOT / "partials/header.html").read_text(encoding="utf-8")
 FOOTER = (ROOT / "partials/footer.html").read_text(encoding="utf-8")
 
 pages = [
-    (ROOT / "index.html",          DIST / "index.html"),
-    (ROOT / "about/index.html",    DIST / "about/index.html"),
-    (ROOT / "products/index.html", DIST / "products/index.html"),
-    (ROOT / "contact/index.html",  DIST / "contact/index.html"),
-    (ROOT / "docs/index.html",     DIST / "docs/index.html"),
-    (ROOT / "docs/filetree.html",  DIST / "docs/filetree.html"),
+    (ROOT / "index.html",                      DIST / "index.html"),
+    (ROOT / "about/index.html",                DIST / "about/index.html"),
+    (ROOT / "products/index.html",             DIST / "products/index.html"),
+    (ROOT / "products/calgen/index.html",      DIST / "products/calgen/index.html"),
+    (ROOT / "products/finpro/index.html",      DIST / "products/finpro/index.html"),
+    (ROOT / "products/ledgerpro/index.html",   DIST / "products/ledgerpro/index.html"),
+    (ROOT / "products/suite/index.html",       DIST / "products/suite/index.html"),
+    (ROOT / "contact/index.html",              DIST / "contact/index.html"),
+    (ROOT / "docs/index.html",                 DIST / "docs/index.html"),
+    (ROOT / "docs/filetree.html",              DIST / "docs/filetree.html"),
+    (ROOT / "legal/index.html",                DIST / "legal/index.html"),
+    (ROOT / "legal/eula-calgen.html",          DIST / "legal/eula-calgen.html"),
+    (ROOT / "legal/eula-finpro.html",          DIST / "legal/eula-finpro.html"),
+    (ROOT / "legal/eula-ledgerpro.html",       DIST / "legal/eula-ledgerpro.html"),
+    (ROOT / "legal/eula-suite.html",           DIST / "legal/eula-suite.html"),
 ]
 
 for src, dst in pages:

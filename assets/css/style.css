@@ -844,6 +844,116 @@ img { max-width: 100%; height: auto; }
 }
 
 /* =========================================================
+   ss-* Component Definitions (missing classes)
+   ========================================================= */
+
+/* Hero section base */
+.ss-hero {
+  padding-bottom: var(--space-lg, 48px);
+}
+
+/* Section wrapper */
+.ss-section {
+  margin-bottom: var(--space-lg, 48px);
+}
+
+/* Subheading beneath h2 */
+.ss-subhead {
+  font-size: 1rem;
+  color: var(--muted, #6b7a89);
+  margin-top: 0;
+  margin-bottom: var(--space-md, 24px);
+  line-height: 1.6;
+}
+
+/* Lead with tighter margin */
+.ss-lead-tight {
+  font-size: 1.05rem;
+  line-height: var(--leading-base, 1.7);
+  color: var(--muted, #6b7a89);
+  margin-bottom: var(--space-sm, 12px);
+}
+
+/* Button variants */
+.ss-btn-primary {
+  background: var(--accent, #004466);
+  color: #fff;
+}
+.ss-btn-primary:hover { background: #003355; }
+
+.ss-btn-ghost {
+  background: transparent;
+  color: var(--accent, #004466);
+  border: 1.5px solid var(--accent, #004466);
+}
+.ss-btn-ghost:hover { background: rgba(0, 68, 102, 0.06); }
+
+/* Actions container */
+.ss-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: var(--space-md, 24px);
+}
+
+/* Card structural zones */
+.ss-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ss-card-bottom {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ss-card-featured {
+  border-left: 3px solid var(--accent, #004466);
+}
+
+/* Grid variants */
+.ss-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md, 24px);
+}
+
+.ss-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md, 24px);
+}
+
+@media (max-width: 700px) {
+  .ss-grid-2,
+  .ss-grid-3 { grid-template-columns: 1fr; }
+}
+
+/* Mini info blocks */
+.ss-mini {
+  padding: 14px;
+  background: rgba(0, 68, 102, 0.04);
+  border-radius: 8px;
+}
+
+.ss-mini-title {
+  font-size: 0.78rem;
+  color: var(--muted, #6b7a89);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.ss-mini-body {
+  font-size: 0.95rem;
+  color: var(--text, #222);
+}
+
+/* =========================================================
    FINAL HEADING AUTHORITY
    The page canvas is always light (--bg is never overridden in dark
    mode — only forced to stay light). Headings must always be navy
