@@ -787,3 +787,38 @@ img { max-width: 100%; height: auto; }
     color: var(--subheading-color);
   }
 }
+
+/* =========================================================
+   FINAL COLOR AUTHORITY — Headings
+   ========================================================= */
+
+/* Light mode: force navy headings */
+:root {
+  --heading-color: #002233;      /* navy-800 */
+  --subheading-color: #00384d;   /* navy-700 */
+}
+
+.ss-h1,
+.ss-h2,
+.ss-h3 {
+  color: var(--heading-color) !important;
+}
+
+.ss-kicker,
+.ss-pill {
+  color: var(--subheading-color) !important;
+}
+
+/* Dark mode: explicitly scoped overrides */
+@media (prefers-color-scheme: dark) {
+  .ss-h1,
+  .ss-h2,
+  .ss-h3 {
+    color: #eaf2f8 !important;
+  }
+
+  .ss-kicker,
+  .ss-pill {
+    color: #9fc6dd !important;
+  }
+}
