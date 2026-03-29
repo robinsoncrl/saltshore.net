@@ -738,3 +738,52 @@ img { max-width: 100%; height: auto; }
     color: var(--muted, #9aa7b2);
   }
 }
+
+/* =========================================================
+   SaltShore Palette / Theme Layer (Inline, Live-Safe)
+   ========================================================= */
+
+:root {
+  /* Navy scale */
+  --navy-900: #001824;
+  --navy-800: #002233;
+  --navy-700: #00384d;
+  --navy-600: #004466;
+
+  /* Semantic bindings */
+  --accent: var(--navy-600);
+  --heading-color: var(--navy-800);
+  --subheading-color: var(--navy-700);
+  --body-color: var(--text);
+}
+
+/* Explicitly color headings and labels so they do not fall back */
+.ss-h1,
+.ss-h2,
+.ss-h3 {
+  color: var(--heading-color);
+}
+
+.ss-kicker,
+.ss-pill {
+  color: var(--subheading-color);
+}
+
+/* Dark mode palette */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --heading-color: #eaf2f8;
+    --subheading-color: #9fc6dd;
+  }
+
+  .ss-h1,
+  .ss-h2,
+  .ss-h3 {
+    color: var(--heading-color);
+  }
+
+  .ss-kicker,
+  .ss-pill {
+    color: var(--subheading-color);
+  }
+}
