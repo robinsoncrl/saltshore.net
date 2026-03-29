@@ -1,0 +1,10 @@
+# IDE
+.vscode/
+
+# Legacy / archival material
+Legacy Artifacts/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
