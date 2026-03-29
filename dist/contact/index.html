@@ -19,31 +19,22 @@
   </style>
 </head>
 <body>
+<nav class="main-nav">
+    <a href="/about/">About</a>
+    <a href="/products/">Products</a>
+    <a href="/contact/">Contact</a>
+    <a href="/docs/">Docs</a>
+</nav>
 
-  <!-- Shared header include -->
-  <div id="header-placeholder"></div>
-  <script>
-    fetch('/partials/header.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-        var a = document.querySelector('.main-nav a[href="/contact/"]');
-        if (a) a.classList.add('active');
-      });
-  </script>
 
   <main>
     <h1>Contact SaltShore Systems</h1>
     <p>Email: <a href="mailto:support@saltshore.net">support@saltshore.net</a></p>
   </main>
+<footer style="text-align:center; margin-top:40px; opacity:0.6; font-family:Revans, sans-serif;">
+    &copy; 2026 SaltShore Systems &mdash; Where tides meet tech.
+</footer>
 
-  <!-- Shared footer include -->
-  <div id="footer-placeholder"></div>
-  <script>
-    fetch('/partials/footer.html')
-      .then(r => r.text())
-      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
-  </script>
 
 </body>
 </html>
