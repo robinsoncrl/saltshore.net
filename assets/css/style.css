@@ -9,10 +9,8 @@
 /* === SaltShore Brand Font: Revans === */
 @font-face {
     font-family: 'Revans';
-    src: url('../fonts/Revans-Medium.woff2') format('woff2'),
-         url('../fonts/Revans-Medium.woff') format('woff'),
-         url('../fonts/Revans-Medium.otf') format('opentype'),
-         url('../fonts/Revans-Medium.ttf') format('truetype');
+  src: url('../fonts/Revans-Medium.otf') format('opentype'),
+     url('../fonts/Revans-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
