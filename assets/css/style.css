@@ -327,7 +327,7 @@ p, li, span, label, input, button {
   }
 }
 /* =========================================================
-   SITE QA PATCH v1 — stability + dark mode + mobile + legal
+   SITE QA PATCH v1 ï¿½ stability + dark mode + mobile + legal
    ========================================================= */
 
 /* ---------- 1) Page jump / "compress then expand" stabilization ---------- */
@@ -841,4 +841,19 @@ img { max-width: 100%; height: auto; }
   .ss-page h3 {
     color: #eaf2f8 !important;
   }
+}
+
+/* =========================================================
+   FINAL HEADING AUTHORITY
+   The page canvas is always light (--bg is never overridden in dark
+   mode â€” only forced to stay light). Headings must always be navy
+   to remain readable. This rule is intentionally last.
+   ========================================================= */
+.ss-h1,
+.ss-h2,
+.ss-h3,
+.ss-page h1,
+.ss-page h2,
+.ss-page h3 {
+  color: #002233 !important;
 }

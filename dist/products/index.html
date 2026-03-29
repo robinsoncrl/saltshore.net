@@ -1,298 +1,121 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Products – SaltShore Systems</title>
-  <meta name="description" content="CalGen, FinPro, and LedgerPro — offline-first tools for freelancers and sole operators.">
-  <meta name="theme-color" content="#004466">
-  <meta property="og:title" content="SaltShore Systems Products — CalGen, FinPro, LedgerPro">
-  <meta property="og:description" content="Three integrated tools for freelancers. Offline-first, one-time purchase, local data.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://saltshore.net/products">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
-  <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
-  <style>
-    body { margin: 0; padding: 0; }
-    .centered-page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 48px 24px 64px 24px;
-      text-align: center;
-    }
-    .centered-page h1 {
-      font-size: 2rem;
-      color: #004466;
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-    .centered-page .lead {
-      font-size: 1.15rem;
-      color: #6b7a89;
-      margin-bottom: 40px;
-      line-height: 1.7;
-    }
-    .suite-pipeline {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 0 auto 48px auto;
-      padding: 16px 24px;
-      background: #f0f7fb;
-      border-radius: 10px;
-      max-width: 640px;
-      font-size: 0.95rem;
-      color: #4a5a6a;
-      letter-spacing: 0.2px;
-    }
-    .suite-pipeline .step {
-      font-weight: 600;
-      color: #004466;
-    }
-    .suite-pipeline .arrow {
-      color: #8ab4c8;
-    }
-    .suite-pipeline .sub {
-      width: 100%;
-      text-align: center;
-      margin-top: 8px;
-      font-size: 0.85rem;
-      color: #8a9aaa;
-      letter-spacing: 0.3px;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      text-align: left;
-    }
-    @media (min-width: 700px) {
-      .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    .product-card {
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      padding: 28px 24px 32px 24px;
-    }
-    .product-card h3 {
-      font-size: 1.2rem;
-      color: #004466;
-      margin: 0 0 4px 0;
-    }
-    .product-card .tagline {
-      font-size: 0.9rem;
-      color: #6b7a89;
-      margin: 0 0 16px 0;
-      font-style: italic;
-    }
-    .product-card p {
-      font-size: 1rem;
-      line-height: 1.65;
-      color: #333;
-      margin: 0 0 16px 0;
-    }
-    .product-card ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-    .product-card ul li {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #4a5a6a;
-      margin-bottom: 4px;
-    }
-    .shared-principles {
-      margin-top: 56px;
-      padding: 32px 24px;
-      background: #f7fbfd;
-      border-radius: 14px;
-      text-align: left;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .shared-principles h2 {
-      font-size: 1.1rem;
-      color: #004466;
-      margin: 0 0 16px 0;
-    }
-    .shared-principles ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-    .shared-principles li {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #333;
-      margin-bottom: 6px;
-    }
-    .shared-principles li strong {
-      color: #004466;
-    }
-  </style>
+  <meta name="description" content="Explore the SaltShore Suite: CalGen, FinPro, and LedgerPro — three tools, one deterministic pipeline." />
+  <meta name="theme-color" content="#001a2b" />
+
+  <meta property="og:title" content="SaltShore Products" />
+  <meta property="og:description" content="Three tools. One pipeline. Structured time → Defensible money → Reconciled records." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saltshore.net/products" />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png" />
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
 </head>
+
 <body>
-<header class="site-header">
-  <div class="logo-container">
-    <a href="/index.html">
-      <img src="/assets/SSS_logo_2.png" alt="SaltShore Systems Logo" class="logo">
-    </a>
-  </div>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/partials/header.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('header-placeholder').innerHTML = html);
+  </script>
 
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-    onclick="var n=document.getElementById('main-nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',String(o))">
-    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-      <rect y="3" width="22" height="2.5" rx="1.25" fill="currentColor"/>
-      <rect y="9.75" width="22" height="2.5" rx="1.25" fill="currentColor"/>
-      <rect y="16.5" width="22" height="2.5" rx="1.25" fill="currentColor"/>
-    </svg>
-  </button>
-  <nav class="main-nav" id="main-nav">
-    <a href="/index.html">Home</a>
-    <a href="/about">About</a>
-    <a href="/products">Products</a>
-    <a href="/contact">Contact</a>
-    <a href="/docs">Docs</a>
-  </nav>
-</header>
-
-<style>
-  .site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .logo-container {
-    margin-bottom: 12px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .logo {
-    height: 160px;
-    width: auto;
-    object-fit: contain;
-  }
-
-  .main-nav {
-    display: flex;
-    gap: 32px;
-    justify-content: center;
-    font-size: 1.25rem;
-  }
-</style>
-
-
-  <main class="centered-page">
-    <section>
-      <h1>Tools built for clarity.</h1>
-      <p class="lead">
-        Three integrated tools for freelancers, contractors, and sole operators.<br>
-        Offline-first. One-time purchase. Your data stays local.
+  <main class="ss-page">
+    <section class="ss-hero">
+      <p class="ss-kicker">Products</p>
+      <h1 class="ss-h1">Three tools. One pipeline.</h1>
+      <p class="ss-lead">
+        Built for freelancers and sole operators who need correctness from first input
+        to final financial record—without silent failures.
       </p>
+      <div class="ss-actions">
+        <a class="ss-btn ss-btn-primary" href="/products/suite">Explore the Suite</a>
+        <a class="ss-btn ss-btn-ghost" href="#tools">View individual tools</a>
+      </div>
     </section>
 
-    <div class="suite-pipeline">
-      <span class="step">CalGen</span>
-      <span class="arrow">&rarr;</span>
-      <span class="step">FinPro</span>
-      <span class="arrow">&rarr;</span>
-      <span class="step">LedgerPro</span>
-      <span class="sub">Structured time &nbsp;&middot;&nbsp; Defensible invoice &nbsp;&middot;&nbsp; Reconciled record</span>
-    </div>
+    <section class="ss-section">
+      <div class="ss-card ss-card-featured">
+        <div class="ss-card-top">
+          <div>
+            <h2 class="ss-h2">The SaltShore Suite</h2>
+            <p class="ss-subhead">Deterministic work → defensible money → trustworthy records.</p>
+          </div>
+          <span class="ss-pill">Bundle</span>
+        </div>
 
-    <section id="products-grid" class="product-grid">
+        <div class="ss-grid ss-grid-2">
+          <div class="ss-mini">
+            <p class="ss-mini-title">Pipeline</p>
+            <p class="ss-mini-body">CalGen → FinPro → LedgerPro</p>
+          </div>
+          <div class="ss-mini">
+            <p class="ss-mini-title">Design principles</p>
+            <p class="ss-mini-body">Offline-first · standards-first · reproducible outputs</p>
+          </div>
+        </div>
 
-      <div class="product-card" data-product-id="calgen">
-        <h3>CalGen</h3>
-        <p class="tagline">iCalendar generation that actually works.</p>
-        <p>
-          The iCalendar standard (RFC 5545) is 147 pages long and broken by every major
-          calendar tool in a different way. CalGen generates compliant ICS files by construction —
-          no timezone drift, no silent field drops, no property ordering failures.
-        </p>
-        <ul>
-          <li>Canonical VTIMEZONE blocks and IANA timezone identifiers</li>
-          <li>Correct RRULE, EXDATE, and RECURRENCE-ID handling</li>
-          <li>Stable UIDs — same event never becomes a duplicate on re-export</li>
-          <li>Deterministic output — identical inputs produce identical bytes</li>
-          <li>Local audit log of every generation event</li>
-        </ul>
+        <div class="ss-card-bottom">
+          <a class="ss-link" href="/products/suite">Read the Suite overview →</a>
+        </div>
       </div>
-
-      <div class="product-card" data-product-id="finpro">
-        <h3>FinPro</h3>
-        <p class="tagline">From structured time to a defensible invoice.</p>
-        <p>
-          Freelancers lose 10–20% of billable income annually to tracking gaps — not low rates,
-          not slow clients, but invisible gaps between hours worked and hours billed. FinPro
-          closes that gap by ingesting CalGen time entries directly and calculating every
-          invoice from explicit rules.
-        </p>
-        <ul>
-          <li>CalGen time entries flow in via <code>.finpro.json</code> — no manual transcription</li>
-          <li>Versioned rate definitions with <code>effective_from</code> and <code>effective_to</code> dates</li>
-          <li>Overtime, weekend, and holiday multipliers applied automatically</li>
-          <li>Immutable line items — every amount locked at invoice issuance</li>
-          <li>Transparent gross-to-net deduction breakdown</li>
-          <li>Household Mode for chore tracking and allowance calculation</li>
-        </ul>
-      </div>
-
-      <div class="product-card" data-product-id="ledgerpro">
-        <h3>LedgerPro</h3>
-        <p class="tagline">Clean financial records — without the cloud.</p>
-        <p>
-          When Mint shut down in early 2024, 3.6M users lost years of financial history. LedgerPro
-          takes the opposite approach: file-based import, local SQLite storage, and a deterministic
-          engine that never silently resolves ambiguity.
-        </p>
-        <ul>
-          <li>Configurable bank profiles — normalize any CSV or OFX format</li>
-          <li>Composite duplicate detection (amount + date + description fingerprint)</li>
-          <li>Transfers as first-class entities — excluded from income and expense totals</li>
-          <li>Canonical merchant alias groups with visible rule derivation</li>
-          <li>Statement coverage index — gaps surfaced before tax time</li>
-          <li>SHA-256 document integrity hashing on every imported file</li>
-          <li>FinPro invoice reconciliation — matches deposits to issued invoices</li>
-        </ul>
-      </div>
-
     </section>
 
-    <div class="shared-principles">
-      <h2>Shared across all three</h2>
-      <ul>
-        <li><strong>Offline-first.</strong> No cloud dependency. No credential delegation. No account required.</li>
-        <li><strong>One-time purchase.</strong> No subscription. No monthly fee. Your data is never held hostage.</li>
-        <li><strong>Deterministic.</strong> Same input always produces the same output. Every figure is traceable to its source.</li>
-        <li><strong>No silent failures.</strong> Every discrepancy is surfaced explicitly. Approximation is a bug, not a feature.</li>
-        <li><strong>Local data ownership.</strong> Your records live on your machine in portable, open formats.</li>
-      </ul>
-    </div>
+    <section id="tools" class="ss-section">
+      <h2 class="ss-h2">Tools</h2>
+      <p class="ss-lead ss-lead-tight">
+        Each tool solves a specific problem. Together, they form a complete system.
+      </p>
 
+      <div class="ss-grid ss-grid-3">
+        <article class="ss-card">
+          <div class="ss-card-top">
+            <h3 class="ss-h3">CalGen</h3>
+            <span class="ss-pill">Time</span>
+          </div>
+          <p class="ss-body">Standards-first iCalendar generation and validation.</p>
+          <div class="ss-card-bottom">
+            <a class="ss-link" href="/products/calgen">View CalGen →</a>
+          </div>
+        </article>
+
+        <article class="ss-card">
+          <div class="ss-card-top">
+            <h3 class="ss-h3">FinPro</h3>
+            <span class="ss-pill">Money</span>
+          </div>
+          <p class="ss-body">Deterministic billing and reproducible financial artifacts.</p>
+          <div class="ss-card-bottom">
+            <a class="ss-link" href="/products/finpro">View FinPro →</a>
+          </div>
+        </article>
+
+        <article class="ss-card">
+          <div class="ss-card-top">
+            <h3 class="ss-h3">LedgerPro</h3>
+            <span class="ss-pill">Records</span>
+          </div>
+          <p class="ss-body">Deterministic statement-to-ledger normalization.</p>
+          <div class="ss-card-bottom">
+            <a class="ss-link" href="/products/ledgerpro">View LedgerPro →</a>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
-<footer class="site-footer" style="text-align:center; margin-top:40px; padding: 24px 8px 16px 8px; opacity:0.75; font-family:Revans, sans-serif; font-size:0.97rem;">
-  <p style="margin:0 0 12px 0;">&copy; 2026 SaltShore Systems &mdash; Where tides meet tech.</p>
-  <div class="footer-icons" style="display:flex; justify-content:center; gap:16px;">
-    <a href="https://www.facebook.com/profile.php?id=61581291097599" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" fill="#1877F3"/><path d="M16.671 24v-9.294h3.12l.467-3.622h-3.587V8.771c0-1.048.293-1.763 1.797-1.763l1.918-.001v-3.24c-.334-.044-1.472-.143-2.797-.143-2.766 0-4.659 1.688-4.659 4.788v2.13H9.692v3.622h3.128V24h3.851z" fill="#fff"/></svg>
-    </a>
-    <a href="mailto:support@saltshore.net" aria-label="Email">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.29 6.71c.39.36 1.02.36 1.41 0L20 10.01V20H4z" fill="#555"/></svg>
-    </a>
-  </div>
-</footer>
 
-
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/partials/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
 </body>
 </html>
