@@ -967,3 +967,25 @@ img { max-width: 100%; height: auto; }
 .ss-page h3 {
   color: #002233 !important;
 }
+
+/* =========================================================
+   LAYOUT SHIFT FIX -- Header placeholder reservation
+   #header-placeholder starts at 0 height. The async fetch
+   for /partials/header.html injects ~264px of header HTML
+   after first paint, causing all content below to jump.
+   :empty reserves that space before the fetch resolves;
+   once the header is injected, :empty no longer matches
+   and the rule cleanly steps aside.
+
+   Height breakdown:
+     site-header margin-top  20px
+     logo                   160px
+     logo-container mb       12px
+     main-nav margin-top     20px
+     main-nav padding+text   52px
+                        ---------
+                            264px
+   ========================================================= */
+#header-placeholder:empty {
+  min-height: 264px;
+}
