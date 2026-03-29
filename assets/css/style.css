@@ -326,3 +326,300 @@ p, li, span, label, input, button {
     gap: 14px;
   }
 }
+/* =========================================================
+   SITE QA PATCH v1 — stability + dark mode + mobile + legal
+   ========================================================= */
+
+/* ---------- 1) Page jump / "compress then expand" stabilization ---------- */
+html { overflow-y: scroll; }
+@supports (scrollbar-gutter: stable) {
+  html { scrollbar-gutter: stable; }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1 0 auto; }
+
+img { height: auto; max-width: 100%; }
+
+/* ---------- 2) Hide hamburger as a safety fallback ---------- */
+.nav-toggle,
+button.nav-toggle,
+button[aria-label="Toggle navigation"] {
+  display: none !important;
+}
+
+.main-nav { flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .main-nav {
+    display: flex !important;
+    gap: 16px;
+    font-size: 1.05rem;
+    padding: 10px 14px;
+  }
+}
+
+/* ---------- 3) Dark mode: header/footer logo backing plates ---------- */
+@media (prefers-color-scheme: dark) {
+
+  html, body {
+    background-color: var(--bg) !important;
+    color: var(--text);
+  }
+
+  .site-header .logo-container,
+  header .logo-container {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+    padding: 8px;
+  }
+
+  .site-footer img,
+  .site-footer a img,
+  .site-footer .logo,
+  footer img {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.35),
+      0 8px 24px rgba(0, 0, 0, 0.55);
+  }
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 640px) {
+  .site-footer img,
+  .site-footer a img,
+  .site-footer .logo,
+  footer img {
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+}
+
+/* ---------- 4) Legal pages: consistent formatting ---------- */
+.ss-page h1,
+.ss-page h2,
+.ss-page h3 { margin: 0 0 12px 0; }
+
+.ss-page p { margin: 10px 0; line-height: var(--leading-base, 1.7); }
+
+.ss-page ul {
+  margin: 10px 0 16px 0;
+  padding-left: 1.25rem;
+}
+
+.ss-page li { margin: 6px 0; line-height: var(--leading-base, 1.7); }
+
+.legal-version-history { margin-top: 18px; }
+.legal-version-history ul { margin-top: 10px; }
+.legal-version-history strong { color: var(--accent, #004466); }
+
+@media (prefers-color-scheme: dark) {
+  .ss-page p,
+  .ss-page li { color: var(--muted, #9aa7b2); }
+  .ss-page h1, .ss-page h2, .ss-page h3 { color: #eaf2f8; }
+  .legal-version-history strong { color: var(--accent, #4fb3ff); }
+}
+
+/* ---------- 5) Mobile: Docs sidebar accessibility ---------- */
+@media (max-width: 760px) {
+
+  .docs-layout,
+  .docs-container,
+  .docs-wrapper {
+    display: block !important;
+  }
+
+  .docs-sidebar,
+  aside.docs-sidebar,
+  aside[aria-label*="Docs"],
+  aside[aria-label*="Documentation"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    position: static !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  .docs-sidebar nav ul,
+  aside nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .docs-sidebar nav ul li,
+  aside nav ul li {
+    margin: 0;
+  }
+
+  .docs-section {
+    margin-top: 12px;
+    padding: 12px 12px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .docs-section {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.10);
+    }
+  }
+}
+
+/* ---------- 6) Mobile spacing tune ---------- */
+@media (max-width: 640px) {
+  .ss-page { padding: 28px 16px 40px; }
+  .ss-hero { padding-bottom: 18px; }
+  .ss-h1 { font-size: 1.85rem; line-height: 1.25; }
+  .ss-h2 { font-size: 1.25rem; }
+  .ss-lead { font-size: 1rem; }
+  .ss-card { padding: 16px; }
+  .ss-actions { gap: 10px; }
+  .ss-btn { padding: 14px 18px; font-size: 1rem; }
+  .ss-pill { font-size: 0.78rem; }
+  .ss-grid { gap: 14px; }
+}
+/* =========================================================
+   SITE STABILITY PATCH v2
+   Fixes: page jump (CLS), dark-mode logos, mobile docs sidebar
+   ========================================================= */
+
+/* ---------- (1) Page jump / compressed-then-expand stabilization ---------- */
+html { overflow-y: scroll; }
+@supports (scrollbar-gutter: stable) {
+  html { scrollbar-gutter: stable; }
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ss-page {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: var(--content-max-wide, 960px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: var(--space-lg, 48px);
+  padding-bottom: var(--space-xl, 64px);
+}
+
+.ss-page > :first-child { margin-top: 0; }
+
+img { max-width: 100%; height: auto; }
+
+/* ---------- (2) Dark mode logos: force LIGHT neutral backing ---------- */
+@media (prefers-color-scheme: dark) {
+
+  html, body {
+    background-color: var(--bg) !important;
+    color: var(--text);
+  }
+
+  .site-header .logo-container,
+  header .logo-container,
+  .logo-container {
+    background: rgba(240, 242, 245, 0.94) !important;
+    border-radius: 999px;
+    padding: 8px;
+    backdrop-filter: blur(6px);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.65),
+      0 10px 28px rgba(0, 0, 0, 0.35);
+  }
+
+  .site-footer img,
+  .site-footer a img,
+  .site-footer .logo,
+  footer img {
+    background: rgba(240, 242, 245, 0.96) !important;
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.70),
+      0 12px 30px rgba(0, 0, 0, 0.40);
+  }
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 640px) {
+  .site-header .logo-container,
+  header .logo-container,
+  .logo-container,
+  .site-footer img,
+  .site-footer a img,
+  .site-footer .logo,
+  footer img {
+    background: rgba(245, 246, 248, 0.96) !important;
+  }
+}
+
+/* ---------- (3) Mobile docs sidebar: ensure it never disappears ---------- */
+@media (max-width: 760px) {
+
+  .docs-layout,
+  .docs-container,
+  .docs-wrapper {
+    display: block !important;
+  }
+
+  .docs-sidebar,
+  aside.docs-sidebar,
+  aside[aria-label*="Docs"],
+  aside[aria-label*="Documentation"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    position: static !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  .docs-content,
+  main .docs-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .docs-sidebar nav ul,
+  aside nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .docs-sidebar nav ul li,
+  aside nav ul li {
+    margin: 0;
+  }
+
+  .docs-section {
+    display: block !important;
+  }
+}
