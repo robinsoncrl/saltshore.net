@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FinPro – SaltShore Systems</title>
+  <meta name="description" content="Deterministic billing and earnings calculation for freelancers. Time entries flow in from CalGen — no manual transcription." />
+  <meta name="theme-color" content="#001a2b" />
+
+  <meta property="og:title" content="FinPro – SaltShore Systems" />
+  <meta property="og:description" content="Versioned rates, immutable invoices, and a transparent gross-to-net breakdown. No manual transcription." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saltshore.net/products/finpro" />
+
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16.png" />
+  <link rel="shortcut icon" href="../../assets/favicon/favicon.ico" />
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/partials/header.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('header-placeholder').innerHTML = html);
+  </script>
+
+  <main class="ss-page">
+    <p class="ss-kicker"><a class="ss-link" href="/products">← Back to Products</a></p>
+
+    <!-- PAGE CONTENT START -->
+    <section class="ss-hero">
+      <h1 class="ss-h1">FinPro</h1>
+      <p class="ss-lead">
+        Freelancers lose 10–20% of billable income annually to tracking gaps — not low rates,
+        not slow clients, but invisible gaps between hours worked and hours billed. FinPro
+        closes that gap by ingesting CalGen time entries directly and calculating every
+        invoice from explicit rules.
+      </p>
+    </section>
+
+    <section class="ss-section">
+      <h2 class="ss-h2">What it does</h2>
+      <ul>
+        <li class="ss-body">CalGen time entries flow in via <code>.finpro.json</code> — no manual transcription</li>
+        <li class="ss-body">Versioned rate definitions with <code>effective_from</code> and <code>effective_to</code> dates</li>
+        <li class="ss-body">Overtime, weekend, and holiday multipliers applied automatically</li>
+        <li class="ss-body">Immutable line items — every amount locked at invoice issuance</li>
+        <li class="ss-body">Transparent gross-to-net deduction breakdown</li>
+        <li class="ss-body">Household Mode for chore tracking and allowance calculation</li>
+      </ul>
+    </section>
+
+    <section class="ss-section">
+      <h2 class="ss-h2">Where it fits</h2>
+      <p class="ss-body">
+        FinPro sits at the center of the SaltShore pipeline. It consumes structured time from
+        CalGen and produces immutable financial artifacts that flow into LedgerPro for
+        reconciliation.
+      </p>
+    </section>
+    <!-- PAGE CONTENT END -->
+
+    <div class="ss-section">
+      <div class="ss-actions">
+        <a class="ss-btn ss-btn-ghost" href="/products">Back to Products</a>
+        <a class="ss-btn ss-btn-primary" href="/products/suite">View the Suite</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/partials/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
+</body>
+</html>

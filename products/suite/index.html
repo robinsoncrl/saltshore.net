@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The SaltShore Suite – SaltShore Systems</title>
+  <meta name="description" content="Three tools, one deterministic pipeline. CalGen, FinPro, and LedgerPro — structured time, defensible invoices, reconciled records." />
+  <meta name="theme-color" content="#001a2b" />
+
+  <meta property="og:title" content="The SaltShore Suite – SaltShore Systems" />
+  <meta property="og:description" content="Deterministic work → defensible money → trustworthy records. Built for freelancers and sole operators." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saltshore.net/products/suite" />
+
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16.png" />
+  <link rel="shortcut icon" href="../../assets/favicon/favicon.ico" />
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/partials/header.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('header-placeholder').innerHTML = html);
+  </script>
+
+  <main class="ss-page">
+    <p class="ss-kicker"><a class="ss-link" href="/products">← Back to Products</a></p>
+
+    <!-- PAGE CONTENT START -->
+    <section class="ss-hero">
+      <h1 class="ss-h1">The SaltShore Suite</h1>
+      <p class="ss-lead">
+        Built for freelancers and sole operators who are done losing money to disconnected apps,
+        spreadsheets, and SaaS subscriptions that hold their data hostage.
+      </p>
+    </section>
+
+    <section class="ss-section">
+      <h2 class="ss-h2">The pipeline</h2>
+      <p class="ss-body">CalGen → FinPro → LedgerPro</p>
+      <p class="ss-body">Structured time → Defensible invoice → Reconciled record</p>
+    </section>
+
+    <section class="ss-section">
+      <h2 class="ss-h2">Shared principles</h2>
+      <ul>
+        <li class="ss-body"><strong>Offline-first.</strong> No cloud dependency. No credential delegation. No account required.</li>
+        <li class="ss-body"><strong>One-time purchase.</strong> No subscription. No monthly fee. Your data is never held hostage.</li>
+        <li class="ss-body"><strong>Deterministic.</strong> Same input always produces the same output. Every figure is traceable to its source.</li>
+        <li class="ss-body"><strong>No silent failures.</strong> Every discrepancy is surfaced explicitly. Approximation is a bug, not a feature.</li>
+        <li class="ss-body"><strong>Local data ownership.</strong> Your records live on your machine in portable, open formats.</li>
+      </ul>
+    </section>
+
+    <section class="ss-section">
+      <h2 class="ss-h2">Individual tools</h2>
+      <ul>
+        <li class="ss-body"><a class="ss-link" href="/products/calgen">CalGen</a> — Standards-first iCalendar generation and validation.</li>
+        <li class="ss-body"><a class="ss-link" href="/products/finpro">FinPro</a> — Deterministic billing and reproducible financial artifacts.</li>
+        <li class="ss-body"><a class="ss-link" href="/products/ledgerpro">LedgerPro</a> — Deterministic statement-to-ledger normalization and reconciliation.</li>
+      </ul>
+    </section>
+    <!-- PAGE CONTENT END -->
+
+    <div class="ss-section">
+      <div class="ss-actions">
+        <a class="ss-btn ss-btn-ghost" href="/products">Back to Products</a>
+        <a class="ss-btn ss-btn-primary" href="/products/suite">View the Suite</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/partials/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
+</body>
+</html>

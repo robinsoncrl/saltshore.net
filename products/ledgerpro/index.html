@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LedgerPro – SaltShore Systems</title>
+  <meta name="description" content="Deterministic statement-to-ledger normalization and reconciliation for auditable, defensible financial records." />
+  <meta name="theme-color" content="#001a2b" />
+
+  <meta property="og:title" content="LedgerPro – SaltShore Systems" />
+  <meta property="og:description" content="Bank statement import and financial records archiving. Normalizes CSV and OFX, reconciles against FinPro invoices." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saltshore.net/products/ledgerpro" />
+
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16.png" />
+  <link rel="shortcut icon" href="../../assets/favicon/favicon.ico" />
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/partials/header.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('header-placeholder').innerHTML = html);
+  </script>
+
+  <main class="ss-page">
+    <p class="ss-kicker"><a class="ss-link" href="/products">← Back to Products</a></p>
+
+    <!-- PAGE CONTENT START -->
+    <section class="ss-hero">
+      <h1 class="ss-h1">LedgerPro</h1>
+      <p class="ss-lead">
+        When Mint shut down in early 2024, 3.6M users lost years of financial history. LedgerPro
+        takes the opposite approach: file-based import, local SQLite storage, and a deterministic
+        engine that never silently resolves ambiguity.
+      </p>
+    </section>
+
+    <section class="ss-section">
+      <h2 class="ss-h2">What it does</h2>
+      <ul>
+        <li class="ss-body">Configurable bank profiles — normalize any CSV or OFX format</li>
+        <li class="ss-body">Composite duplicate detection (amount + date + description fingerprint)</li>
+        <li class="ss-body">Transfers as first-class entities — excluded from income and expense totals</li>
+        <li class="ss-body">Canonical merchant alias groups with visible rule derivation</li>
+        <li class="ss-body">Statement coverage index — gaps surfaced before tax time</li>
+        <li class="ss-body">SHA-256 document integrity hashing on every imported file</li>
+        <li class="ss-body">FinPro invoice reconciliation — matches deposits to issued invoices</li>
+      </ul>
+    </section>
+
+    <section class="ss-section">
+      <h2 class="ss-h2">Where it fits</h2>
+      <p class="ss-body">
+        LedgerPro is the final stage of the SaltShore pipeline. It ingests bank statements,
+        reconciles them against FinPro invoices, and produces an auditable financial record
+        that closes the loop from time tracked to money confirmed.
+      </p>
+    </section>
+    <!-- PAGE CONTENT END -->
+
+    <div class="ss-section">
+      <div class="ss-actions">
+        <a class="ss-btn ss-btn-ghost" href="/products">Back to Products</a>
+        <a class="ss-btn ss-btn-primary" href="/products/suite">View the Suite</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/partials/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
+</body>
+</html>
