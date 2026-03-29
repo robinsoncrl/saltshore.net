@@ -18,7 +18,7 @@
       gap: 48px;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 40px 24px 64px 24px;
+      padding: var(--space-lg) var(--space-md) var(--space-xl) var(--space-md);
     }
     @media (max-width: 700px) {
       .docs-layout {
@@ -47,12 +47,17 @@
       transition: opacity 0.15s;
     }
     .docs-sidebar a:hover { opacity: 1; color: #004466; }
-    .docs-content { max-width: 720px; }
+    .docs-sidebar a.sidebar-active {
+      opacity: 1;
+      color: #004466;
+      font-weight: 600;
+    }
+    .docs-content { max-width: var(--content-max); }
     .docs-content h1 {
-      font-size: 2rem;
+      font-size: var(--h1);
       color: #004466;
       margin-bottom: 12px;
-      line-height: 1.2;
+      line-height: var(--leading-tight);
     }
     .docs-content .lead {
       font-size: 1.1rem;
@@ -61,7 +66,7 @@
       line-height: 1.7;
     }
     .docs-content h2 {
-      font-size: 1.15rem;
+      font-size: var(--h2);
       color: #004466;
       margin-top: 36px;
       margin-bottom: 12px;
@@ -83,6 +88,13 @@
       line-height: 1.7;
       margin-bottom: 6px;
       color: #333;
+    }
+    .meta-updated {
+      font-size: 0.85rem;
+      color: #8a9aaa;
+      font-style: italic;
+      margin-top: -32px;
+      margin-bottom: 40px;
     }
     .docs-content a { color: #004466; }
     .footer-note {
@@ -155,6 +167,7 @@
 
     <section class="docs-content">
       <h1>SaltShore Documentation</h1>
+      <p class="meta-updated">Last updated: March 2026</p>
       <p class="lead">
         Welcome to the SaltShore Systems documentation hub. Here you'll find guides,
         references, and best practices for using SaltShore tools and workflows.
@@ -217,5 +230,23 @@
   </div>
 </footer>
 
+  <script>
+    // Scroll-spy: highlight active section in sidebar
+    (function () {
+      var headings = document.querySelectorAll('.docs-content h2[id]');
+      var links = document.querySelectorAll('.docs-sidebar a');
+      function onScroll() {
+        var active = '';
+        headings.forEach(function (h) {
+          if (h.getBoundingClientRect().top <= 140) active = h.id;
+        });
+        links.forEach(function (a) {
+          a.classList.toggle('sidebar-active', a.getAttribute('href') === '#' + active);
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      setTimeout(onScroll, 100);
+    })();
+  </script>
 </body>
 </html>
