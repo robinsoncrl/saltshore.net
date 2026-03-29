@@ -25,3 +25,30 @@ body {
     color: var(--text);
     background: var(--bg);
 }
+
+/* === Navigation Styling === */
+.main-nav {
+  margin-top: 20px;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 12px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
+  font-family: 'Revans', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #001a2b;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #004466;
+}
